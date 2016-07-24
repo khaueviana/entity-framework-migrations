@@ -55,6 +55,12 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KV.Ef6Migrations.Domain\KV.Ef6Migrations.Domain.csproj">
+      <Project>{11c59ef9-fda1-438e-adbe-3d13a549eb8c}</Project>
+      <Name>KV.Ef6Migrations.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
