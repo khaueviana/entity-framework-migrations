@@ -1,4 +1,5 @@
-﻿using KV.Ef6Migrations.Domain.Entities;
+﻿using KV.Ef6Migrations.DataAccess.Map;
+using KV.Ef6Migrations.Domain.Entities;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 
@@ -57,6 +58,12 @@ namespace KV.Ef6Migrations.DataAccess
             /*Toda propriedade do tipo string na entidade POCO seja configurado como VARCHAR (150) no banco de dados */
             modelBuilder.Properties<string>()
                   .Configure(p => p.HasMaxLength(150));
+
+            modelBuilder.Configurations.Add(new StudentMap());
+            modelBuilder.Configurations.Add(new StudentClassMap());
+            modelBuilder.Configurations.Add(new CourseMap());
+            modelBuilder.Configurations.Add(new TeacherMap());
+            modelBuilder.Configurations.Add(new UserMap());
         }
     }
 }

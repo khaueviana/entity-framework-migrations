@@ -6,7 +6,7 @@
 *.user
 *.userosscache
 *.sln.docstates
-KV.Ef6Migrations/KV.Ef6Migrations.ConsoleApplication/App.config
+**/App.config
 
 
 # User-specific files (MonoDevelop/Xamarin Studio)

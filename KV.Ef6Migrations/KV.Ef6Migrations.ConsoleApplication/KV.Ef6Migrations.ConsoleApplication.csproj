@@ -57,7 +57,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="packages.config" />
+    <None Include="App.Sample.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\KV.Ef6Migrations.DataAccess\KV.Ef6Migrations.DataAccess.csproj">
