@@ -1,4 +1,5 @@
 ﻿using KV.Ef6Migrations.Domain.Entities;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.ModelConfiguration;
 
 namespace KV.Ef6Migrations.DataAccess.Map
@@ -8,7 +9,10 @@ namespace KV.Ef6Migrations.DataAccess.Map
         public StudentClassMap()
         {
             ToTable("StudentClass");
-            HasKey(x => x.StudentClassId);
+
+            //Id gerado na aplicação através do Guid
+            Property(x => x.StudentClassId)
+                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
 
             /*Na entidade StudentClass, a propriedade do tipo Course é obrigatória*/
             HasRequired(x => x.Course)

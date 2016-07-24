@@ -1,4 +1,6 @@
-﻿namespace KV.Ef6Migrations.Domain.Entities
+﻿using System;
+
+namespace KV.Ef6Migrations.Domain.Entities
 {
     public class Student : Person
     {
@@ -7,7 +9,7 @@
             User = new User();
         }
 
-        public int StudentId { get; set; }
+        public Guid StudentId { get; set; }
         public virtual StudentClass StudentClass { get; set; }
         public virtual User User { get; set; }
     }

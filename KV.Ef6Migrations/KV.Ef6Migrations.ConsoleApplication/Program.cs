@@ -16,7 +16,7 @@ namespace KV.Ef6Migrations.ConsoleApplication
                     .ToList();
 
             var course = courses.FirstOrDefault(x => x.Number == "70-486");
-            var teacher = course.TeacherList.FirstOrDefault(x => x.TeacherId == 2);
+            var teacher = course.TeacherList.First();
 
             StudentClass studentClass = new StudentClass();
             studentClass.InitialDate = DateTime.Now;

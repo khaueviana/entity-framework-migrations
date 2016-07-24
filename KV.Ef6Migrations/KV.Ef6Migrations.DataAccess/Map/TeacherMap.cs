@@ -1,4 +1,5 @@
 ﻿using KV.Ef6Migrations.Domain.Entities;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.ModelConfiguration;
 
 namespace KV.Ef6Migrations.DataAccess.Map
@@ -8,7 +9,11 @@ namespace KV.Ef6Migrations.DataAccess.Map
         public TeacherMap()
         {
             ToTable("Teacher");
-            HasKey(x => x.TeacherId);
+
+            //Id gerado na aplicação através do Guid
+            Property(x => x.TeacherId)
+                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+
             Property(x => x.Name).HasMaxLength(150).IsRequired();
         }
     }

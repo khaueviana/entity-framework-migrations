@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace KV.Ef6Migrations.Domain.Entities
 {
@@ -10,7 +11,7 @@ namespace KV.Ef6Migrations.Domain.Entities
             StudentClassList = new List<StudentClass>();
         }
 
-        public int TeacherId { get; set; }
+        public Guid TeacherId { get; set; }
         public virtual ICollection<Course> CourseList { get; set; }
         public virtual ICollection<StudentClass> StudentClassList { get; set; }
 

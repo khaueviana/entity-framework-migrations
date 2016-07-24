@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace KV.Ef6Migrations.Domain.Entities
 {
@@ -10,7 +11,7 @@ namespace KV.Ef6Migrations.Domain.Entities
             Active = true;
         }
 
-        public int CourseId { get; set; }
+        public Guid CourseId { get; set; }
         public string Number { get; set; }
         public string Description { get; set; }
         public bool Active { get; set; }

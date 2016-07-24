@@ -1,6 +1,7 @@
 ﻿using KV.Ef6Migrations.Domain.Entities;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.ModelConfiguration;
 using System.Linq;
 using System.Text;
@@ -13,7 +14,10 @@ namespace KV.Ef6Migrations.DataAccess.Map
         public StudentMap()
         {
             ToTable("Student");
-            HasKey(x => x.StudentId);
+
+            //Id gerado na aplicação através do Guid
+            Property(x => x.StudentId)
+                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
 
             //1:N - 1 student DEVE ter 1 student class e 1 student class pode ter muitos students 
             HasRequired(x => x.StudentClass)

@@ -10,7 +10,7 @@ namespace KV.Ef6Migrations.Domain.Entities
             StudentList = new List<Student>();
         }
 
-        public int StudentClassId { get; set; }
+        public Guid StudentClassId { get; set; }
         public DateTime InitialDate { get; set; }
         public DateTime EndDate { get; set; }
         public virtual Teacher Teacher { get; set; }
