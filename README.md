@@ -1,5 +1,4 @@
-entity-framework-migrations
----------------------------
+# entity-framework-migrations
 
 Examples created based on great articles published in Net Coders of Diego Neves:
 
