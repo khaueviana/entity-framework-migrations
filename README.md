@@ -1,16 +1,20 @@
-# Entity Framework 6x Migrations Sample
+entity-framework-migrations
+---------------------------
 
-Exemplos criados com base nos ótimos artigos publicados no Net Coders, do Diego Neves:
+Examples created based on great articles published in Net Coders of Diego Neves:
 
 http://netcoders.com.br/blog/mapeamento-com-entity-framework-code-first-fluent-api-parte-1/
 
 http://netcoders.com.br/blog/mapeamento-com-entity-framework-code-first-fluent-api-parte-2/
 
-**Comandos básicos**
+**EF Version**
+
+Entity Framework 6x
+
+**Basic commands**
 
 Enable-Migrations
 
 Update-Database -Verbose
 
 Add-Migrations
-
