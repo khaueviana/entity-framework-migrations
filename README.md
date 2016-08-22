@@ -6,11 +6,13 @@ http://netcoders.com.br/blog/mapeamento-com-entity-framework-code-first-fluent-a
 
 http://netcoders.com.br/blog/mapeamento-com-entity-framework-code-first-fluent-api-parte-2/
 
-**EF Version**
+EF Version
+-----------
 
 Entity Framework 6x
 
-**Basic commands**
+Basic commands
+--------------
 
 Enable-Migrations
 
